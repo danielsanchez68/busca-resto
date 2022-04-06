@@ -202,22 +202,22 @@ function iniControles(m) {
                     '<span class="material-icons">gps_fixed</span>':
                     '<span class="material-icons">gps_off</span>'
             }
-            else if (index == 8) {
+            else if (index == 9) {
                 barrios = !barrios
-                document.querySelectorAll('header button')[8].innerHTML = barrios? 
+                document.querySelectorAll('header button')[9].innerHTML = barrios? 
                     '<span class="material-icons">web_asset</span>' :
                     '<span class="material-icons">space_dashboard</span>'
             }
-            else if (index == 9) {
+            else if (index == 10) {
                 restos = !restos
-                document.querySelectorAll('header button')[9].innerHTML = restos? 
+                document.querySelectorAll('header button')[10].innerHTML = restos? 
                     '<span class="material-icons">room</span>' :
                     '<span class="material-icons">hide_source</span>'
             }
-            else if (index == 10) {
+            else if (index == 8) {
                 setInfo(!getInfo())
                 let info = getInfo()
-                document.querySelectorAll('header button')[10].innerHTML = info? 
+                document.querySelectorAll('header button')[8].innerHTML = info? 
                     '<span class="material-icons">privacy_tip</span>':
                     '<span class="material-icons">live_help</span>'
             }
