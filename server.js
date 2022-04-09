@@ -7,14 +7,18 @@ const Barrio = mongoose.model('barrios', { });
 
 const config = require('./config.js')
 
+var baseConectada = false
+
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 app.use(express.static('public'))
 
+app.get('/version', (req,res) => {
+    res.json({version: config.VERSION})
+})
 
-var baseConectada = false
 app.post('/datos', (req,res) => {
     let { distancia, posicion } = req.body
 

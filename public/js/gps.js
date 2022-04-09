@@ -59,5 +59,3 @@ function toggleGPS() {
 function getGPS() {
     return geoWatch
 }
-
-startWatch()
