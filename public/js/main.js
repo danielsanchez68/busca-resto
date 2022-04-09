@@ -17,14 +17,14 @@ function start() {
     console.log('start...')
     registrarServiceWorker()
 
-    document.querySelectorAll('header button')[7].innerHTML = startWatch()? 
-    '<span class="material-icons">gps_fixed</span>':
-    '<span class="material-icons">gps_off</span>'
-    
+    geoWatch = startWatch()
+    console.log(geoWatch)
+
     getGeoData(iniMap)
 
     fetch('/version').then(r => r.json()).then( rta => {
         document.querySelector('title').textContent += ` ${rta.version}`
+        document.querySelector('header h5').textContent = document.querySelector('title').textContent
     })
 }
 
